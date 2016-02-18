@@ -72,6 +72,5 @@ public class MongoConn {
 	}
 	public static void main(String[] args) {		
 		MongoCollection<Document> coll = MongoConn.getInstance().getDataBase().getCollection("passrecord");
-		
 	}
 }
