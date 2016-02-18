@@ -1,11 +1,14 @@
-package org.mx.mongdb.stu.client;
+package org.mx.mongdb.stu.conn;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import org.bson.Document;
+
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 /**
  * 封装数据库连接细节
@@ -67,8 +70,8 @@ public class MongoConn {
 	public MongoDatabase getDataBase(String database){
 		return client.getDatabase(database);
 	}
-	public static void main(String[] args) {
-		MongoConn.getInstance().getDataBase()
-				.createCollection("passrecord");
+	public static void main(String[] args) {		
+		MongoCollection<Document> coll = MongoConn.getInstance().getDataBase().getCollection("passrecord");
+		
 	}
 }
