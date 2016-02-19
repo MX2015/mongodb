@@ -99,7 +99,7 @@ public final class GridFSTour {
          * Find documents
          */
         gridFSBucket.find().forEach(new Block<GridFSFile>() {
-            @Override
+            
             public void apply(final GridFSFile gridFSFile) {
                 System.out.println(gridFSFile.getFilename());
             }
@@ -110,7 +110,7 @@ public final class GridFSTour {
          */
         gridFSBucket.find(eq("metadata.contentType", "image/png")).forEach(
                 new Block<GridFSFile>() {
-                    @Override
+                    
                     public void apply(final GridFSFile gridFSFile) {
                         System.out.println(gridFSFile.getFilename());
                     }

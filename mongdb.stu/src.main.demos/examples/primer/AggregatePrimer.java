@@ -42,7 +42,7 @@ public class AggregatePrimer extends PrimerTestCase {
         // @pre: Iterate the results and apply a block to each resulting document
         // @code: start
         iterable.forEach(new Block<Document>() {
-            @Override
+            
             public void apply(final Document document) {
                 System.out.println(document.toJson());
             }
@@ -76,7 +76,7 @@ public class AggregatePrimer extends PrimerTestCase {
         // @pre: Iterate the results and apply a block to each resulting document
         // @code: start
         iterable.forEach(new Block<Document>() {
-            @Override
+            
             public void apply(final Document document) {
                 System.out.println(document.toJson());
             }

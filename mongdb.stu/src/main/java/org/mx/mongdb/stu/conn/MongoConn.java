@@ -71,6 +71,6 @@ public class MongoConn {
 		return client.getDatabase(database);
 	}
 	public static void main(String[] args) {		
-		MongoCollection<Document> coll = MongoConn.getInstance().getDataBase().getCollection("passrecord");
+		MongoCollection<Document> coll = MongoConn.getInstance().getDataBase().getCollection("passrecord");	
 	}
 }
